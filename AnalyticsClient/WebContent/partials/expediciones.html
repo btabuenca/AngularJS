@@ -1,0 +1,44 @@
+<!-- 
+<a ui-sref="newExpedicion" class="btn-primary btn-lg nodecoration">Add New Expedicion</a>
+ -->
+<table class="table expediciontable">
+    <tr>
+        <td colspan="11"><h3>All expediciones [{{expediciones.length}}]</h3></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><b>Matricula</b></td>        
+        <td><b>Mercancia</b></td>
+        <td><b>Precinto</b></td>
+        <td><b>Destino</b></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_prev_15x.png" alt="Previsto"></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_info_15x.png" alt="Registrado"></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_in_15x.png" alt="Aut.Ent."></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_inside_15x.jpg" alt="Entrada"></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_out_15x.png" alt="Aut.Sal."></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_finish_15x.png" alt="Salida"></td>        
+        <td colspan="2"></td>
+    </tr>    
+
+    
+    <tr ng-repeat="expedicion in expediciones">
+        <td>{{expedicion.matricula}}</td>        
+        <td>{{expedicion.mercancia}}</td>
+        <td>{{expedicion.precinto}}</td>
+        <td>{{expedicion.destino}}</td>
+        <td>{{expedicion.dPrev}}</td>
+        <td>{{expedicion.dReg}}</td>
+        <td>{{expedicion.dAutEnt}}</td>
+        <td>{{expedicion.dEnt}}</td>
+        <td>{{expedicion.dAutSal}}</td>
+        <td>{{expedicion.dSal}}</td>        
+        
+        <td>
+            <a class="btn btn-stefclear" ui-sref="viewExpedicion({id:expedicion.idregistro})">View</a>
+<!--             
+            <a class="btn btn-danger" ng-click="deleteExpedicion(expedicion)">Delete</a>
+-->            
+        </td>
+    </tr>
+</table>

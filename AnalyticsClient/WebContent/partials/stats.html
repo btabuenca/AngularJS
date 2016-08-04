@@ -1,0 +1,41 @@
+<div google-chart chart="pieChartObject" style="height:600px; width:100%;"></div>
+<div google-chart chart="barChartObject" style="height:600px; width:100%;"></div>
+<div google-chart chart="gaugeChartObject" style="height:130px; width:100%;"></div>
+<div google-chart chart="lineChartObject" style="height:600px; width:100%;"></div>
+
+
+<h1>- Tabla de datos -</h1>
+http://stackoverflow.com/questions/23984929/angularjs-how-to-load-json-data-onto-a-scope-variable
+
+<table class="table expediciontable">
+    <tr>
+        <td colspan="10"><h3>All expediciones [{{expediciones.length}}]</h3></td>
+    </tr>
+
+    <tr>
+        <td><b>Matricula</b></td>        
+        <td><b>Mercancia</b></td>
+        <td><b>Precinto</b></td>
+        <td><b>Destino</b></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_prev_15x.png" alt="Previsto"></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_info_15x.png" alt="Registrado"></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_in_15x.png" alt="Aut.Ent."></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_inside_15x.jpg" alt="Entrada"></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_out_15x.png" alt="Aut.Sal."></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_finish_15x.png" alt="Salida"></td>        
+    </tr>    
+
+    
+    <tr ng-repeat="expedicion in expediciones">
+        <td>{{expedicion.matricula}}</td>        
+        <td>{{expedicion.mercancia}}</td>
+        <td>{{expedicion.precinto}}</td>
+        <td>{{expedicion.destino}}</td>
+        <td>{{expedicion.dPrev}}</td>
+        <td>{{expedicion.dReg}}</td>
+        <td>{{expedicion.dAutEnt}}</td>
+        <td>{{expedicion.dEnt}}</td>
+        <td>{{expedicion.dAutSal}}</td>
+        <td>{{expedicion.dSal}}</td>             
+    </tr>
+</table>

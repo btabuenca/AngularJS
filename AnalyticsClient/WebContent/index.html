@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html data-ng-app="analyticsApp">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/"/>
+    <title>Analytics client portal</title>
+    <link rel="stylesheet" type="text/css" href="./AnalyticsClient/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./AnalyticsClient/css/app.css"/>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">                	
+                    <li class="active"><a ui-sref="expediciones"><img src="./AnalyticsClient/images/stef_152x45.png" border="0"></a></li>
+                </ul>
+            </div>        
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="expediciones">Expediciones</a>
+            </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="recepciones">Recepciones</a>
+            </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="stats">Estadisticas</a>
+            </div>                                       
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row top-buffer">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="./AnalyticsClient/lib/angular.min.js"></script>
+    <script type="text/javascript" src="./AnalyticsClient/js/app.js"></script>
+    <script type="text/javascript" src="./AnalyticsClient/js/controllers.js"></script>
+    <script type="text/javascript" src="./AnalyticsClient/js/services.js"></script>
+    <script type="text/javascript" src="./AnalyticsClient/js/directives.js"></script>
+    <script type="text/javascript" src="./AnalyticsClient/js/filters.js"></script>
+    <script type="text/javascript" src="./AnalyticsClient/lib/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="./AnalyticsClient/lib/angular-resource.min.js"></script>
+    
+    <!-- Charts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-chart/0.1.0/ng-google-chart.js"></script>
+    
+</body>
+</html>

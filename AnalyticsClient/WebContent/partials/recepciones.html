@@ -1,0 +1,37 @@
+
+<table class="table expediciontable">
+    <tr>
+        <td colspan="10"><h3>All recepciones [{{recepciones.length}}]</h3></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><b>Matricula</b></td>        
+        <td><b>Mercancia</b></td>
+        <td><b>Empresa</b></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_prev_15x.png" alt="Previsto"></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_info_15x.png" alt="Registrado"></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_in_15x.png" alt="Aut.Ent."></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_inside_15x.jpg" alt="Entrada"></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_out_15x.png" alt="Aut.Sal."></td>
+        <td align="center"><img src="./AnalyticsClient/images/icon_finish_15x.png" alt="Salida"></td>
+        <td colspan="2"></td>
+    </tr>    
+
+    
+    <tr ng-repeat="recepcion in recepciones">
+        <td>{{recepcion.matricula}}</td>        
+        <td>{{recepcion.mercancia}}</td>
+        <td>{{recepcion.empresa}}</td>
+        <td>{{recepcion.dPrev}}</td>
+        <td>{{recepcion.dReg}}</td>
+        <td>{{recepcion.dAutEnt}}</td>
+        <td>{{recepcion.dEnt}}</td>
+        <td>{{recepcion.dAutSal}}</td>
+        <td>{{recepcion.dSal}}</td>        
+        
+        <td>
+            <a class="btn btn-stefdark" ui-sref="viewRecepcion({id:recepcion.idregistro})">View</a> 
+        </td>
+    </tr>
+</table>
